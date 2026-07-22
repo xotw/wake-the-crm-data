@@ -71,11 +71,17 @@ On connait les reponses : les comptes reellement chauds ont ete plantes dans les
 
 ## Partie 2 — L'open challenge (demo day)
 
-> **« Montre-nous l'outil GTM qui manque aujourd'hui — soit un truc que tu as deja construit, soit ce que tu construirais ensuite. Deroule la logique entiere : quel probleme, pourquoi maintenant, comment ca marche bout en bout, ou ca casse. »**
+Deux volets. Les deux comptent.
 
-Pas besoin d'un build poli. Le livrable, c'est ton raisonnement + un schema + (optionnel) un prototype rugueux.
+### 2a. Ce que tu as deja construit
 
-Evalue sur 4 axes :
+Montre-nous un truc que tu as **vraiment** construit — script, workflow, automation, app, peu importe la taille. Deroule la logique entiere : quel probleme, quels choix, comment ca marche bout en bout, ou ca casse, et ce que tu referais differemment aujourd'hui.
+
+### 2b. L'outil GTM que tu as toujours voulu avoir
+
+Celui qui manque, celui que personne n'a construit pour toi. Pas besoin d'un build poli : le livrable, c'est ton raisonnement + un schema + (optionnel) un prototype rugueux. Quel probleme, pourquoi maintenant, comment ca marche, ou ca casse.
+
+Les deux volets sont evalues sur 4 axes :
 
 | Axe | La question qu'on se posera |
 |---|---|
