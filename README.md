@@ -44,13 +44,28 @@ Rien n'est impose. C'est TOI qui decides, et tu devras defendre chaque choix :
 
 - **Ta taxonomie de triggers.** Qu'est-ce qui compte comme un signal ? Comment distingues-tu le fit (ce compte vaut-il quelque chose) de l'engagement (bougent-ils maintenant) ? Un event isole vs un cluster ? Est-ce que 3 contacts actifs en 7 jours = 1 contact actif 3 fois ? Un click d'il y a 60 jours vaut-il encore quelque chose ? Et les signaux negatifs ?
 - **Ou vit ton scoring.** Dans un outil ? Dans une base externe ? Pourquoi ?
-- **Config, pas code.** Les poids et seuils doivent etre modifiables **sans redeployer**. On te demandera de changer une regle en live.
+- **Config, pas code.** Les poids et seuils vivent en config, pas en dur dans le code. On ne te demandera pas de changer une regle en live — mais on te posera des questions, et chaque poids doit avoir un pourquoi.
 
-### 3. Le push
+**Un schema de ton scoring est fortement encourage.** Comment les signaux entrent, comment ils se combinent, ou sont les seuils. Si tu ne peux pas le dessiner, c'est qu'il n'est pas clair.
+
+### 3. La donnee fraiche — l'architecture d'enrichissement
+
+Le CRM a 8 ans. Rien ne garantit que ses champs sont encore vrais : effectifs, titres, emails, tout est potentiellement perime. Et il te manque peut-etre des donnees que le CRM n'a jamais eues.
+
+Les entreprises du dataset sont fictives, donc pas d'enrichissement reel possible : **cette partie est un exercice d'architecture, sur schema.** Propose le protocole complet :
+
+- **Quoi** — quelles donnees tu rafraichis ou vas chercher (firmographique, titres, emails, signaux externes), et pourquoi celles-la.
+- **Avec quoi** — quels outils ou sources pour chaque type de donnee. A toi de choisir et de justifier.
+- **Quand** — a l'ingestion ? Score-gated (on n'enrichit pas 30 000 comptes a l'aveugle) ? En waterfall ? Qu'est-ce qui declenche un refresh ?
+- **A quel cout** — chaque appel coute. Ou mets-tu les gates pour ne pas bruler le budget ?
+
+Livrable : **un schema d'architecture + le protocole ecrit.**
+
+### 4. Le push
 
 Les comptes chauds doivent atterrir quelque part d'actionnable (digest Slack, webhook, ce que tu veux) — **avec les preuves** : « Compte X passe hot : 3 contacts actifs cette semaine dont la VP People, /pricing visite 2 fois, demo request. »
 
-### 4. Le dashboard — deploye sur ton infra
+### 5. Le dashboard — deploye sur ton infra
 
 Trois vues :
 
@@ -64,8 +79,8 @@ On connait les reponses : les comptes reellement chauds ont ete plantes dans les
 
 1. **Precision et rappel** — combien de vrais chauds trouves, combien de faux positifs remontes.
 2. **Les pieges** — y es-tu tombe ?
-3. **Explicabilite** — chaque score justifiable depuis le dashboard.
-4. **Le test live** — changer un poids sans redeployer, ingerer un event pourri sans crash.
+3. **Explicabilite** — chaque score justifiable depuis le dashboard, chaque architecture depuis un schema.
+4. **L'oral** — on te posera des questions sur chaque choix : regle, poids, seuil, outil d'enrichissement. Chacun doit avoir un pourquoi.
 
 ---
 
@@ -94,7 +109,7 @@ Les deux volets sont evalues sur 4 axes :
 
 ## Regles du jeu
 
-- **Duree : 1 semaine**, demo a la fin. Rythme indicatif : J1-J2 cleanup + modele de donnees, J3-J4 scoring + push, J5 dashboard.
+- **Duree : 1 semaine**, demo a la fin. Rythme indicatif : J1-J2 cleanup + modele de donnees, J3-J4 scoring + push + schema d'enrichissement, J5 dashboard.
 - **Stack libre.** On juge le resultat et la logique, pas les outils.
 - **Deploye**, pas en localhost. Ton infra, ton choix.
 - **IA bienvenue.** Utilise Claude, GPT, ce que tu veux — mais tu dois pouvoir defendre chaque ligne de logique comme si tu l'avais ecrite.
