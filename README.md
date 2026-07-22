@@ -100,10 +100,10 @@ Les deux volets sont evalues sur 4 axes :
 
 | Axe | La question qu'on se posera |
 |---|---|
-| **Pragmatisme** | Est-ce que ca shippe en 2 semaines, et quelqu'un l'utilise lundi ? |
-| **Enthousiasme** | Est-ce que tu y crois vraiment, ou c'est une idee tendance LinkedIn ? |
-| **Avant-garde** | Y a-t-il UN move genuinement non evident dedans ? |
-| **Excellence** | Ta logique survit-elle a nos questions ? Sais-tu ou ca casse ? |
+| **Pragmatisme** | Ton energie est-elle la ou l'impact est ? Est-ce que ca shippe en 2 semaines, et quelqu'un l'utilise lundi ? Tu arrives avec une solution, pas un probleme ? |
+| **Avant-gardisme** | Y a-t-il UN move genuinement non evident dedans ? As-tu teste un outil avant tout le monde ? |
+| **Leadership** | Es-tu fiable de bout en bout : engagements tenus, exigence elevee sans perfectionnisme inutile ? Et surtout : alertes-tu toi-meme sur ou ca casse, sans qu'on te le demande ? |
+| **Enthousiasme** | Est-ce que tu y crois vraiment, ou c'est une idee tendance LinkedIn ? Le scepticisme est bienvenu, le pessimisme non. |
 
 ---
 
